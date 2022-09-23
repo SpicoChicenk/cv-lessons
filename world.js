@@ -280,19 +280,61 @@
 // if the dealer has a value of 16 or less they need to take another card.
 // 1 deck to start
 
-let deck = [2,3,4,5,6,7,8,9,10,10,10,10,"A",2,3,4,5,6,7,8,9,10,10,10,10,"A",2,3,4,5,6,7,8,9,10,10,10,10,"A",2,3,4,5,6,7,8,9,10,10,10,10,"A"];
-let randomCard = deck[Math.floor(Math.random() * deck.length)];
-// (;;) <- syntax
-for (;;){
-  // basically if the length of the array is less than 1 it stops the for loop.
-  if (deck.length < 1) break;
-  // splices the array with the index that you get from the math.floor and math.random, the 1 is the number of indexes being removed
-  randomCard = deck.splice([Math.floor(Math.random() * deck.length)], 1);
-  // if the value found at index 0 of the randomCard array strictly equals string A
-  if (randomCard[0] === "A") {
-    // randomCard will be assigned the random value spliced from an array that has two values either 1 or 11
-    randomCard = [1,11].splice([Math.floor(Math.random() * 2)], 1);
+// let deck = [2,3,4,5,6,7,8,9,10,10,10,10,"A",2,3,4,5,6,7,8,9,10,10,10,10,"A",2,3,4,5,6,7,8,9,10,10,10,10,"A",2,3,4,5,6,7,8,9,10,10,10,10,"A"];
+// let randomCard = deck[Math.floor(Math.random() * deck.length)];
+// // (;;) <- syntax
+// for (;;){
+//   // basically if the length of the array is less than 1 it stops the for loop.
+//   if (deck.length < 1) break;
+//   // splices the array with the index that you get from the math.floor and math.random, the 1 is the number of indexes being removed
+//   randomCard = deck.splice([Math.floor(Math.random() * deck.length)], 1);
+//   // if the value found at index 0 of the randomCard array strictly equals string A
+//   if (randomCard[0] === "A") {
+//     // randomCard will be assigned the random value spliced from an array that has two values either 1 or 11
+//     randomCard = [1,11].splice([Math.floor(Math.random() * 2)], 1);
+//   }
+//   console.log("The card value: " + randomCard[0]);
+//   console.log(deck);
+// }
+
+// i will receive 3 numbers and i need to test if they are divisible by 11
+// 1. receive numbers
+// 2. test to make the total amount of numbers received is 3 no more no less
+// 3. if less than 3 numbers is received or more than 3 numbers is received politely request the numbers are re-entered. Make sure there are 3 entered.
+// 4. if the total number received is 3, test to see if its divisible by 11
+// 5. if the number received is divisible by 11 return yes
+// 6. if the number received is not divisible by 11 return no
+// 7. end
+
+// things that might help
+// > devdocs / google
+// > console.log
+// > escape sequences
+// > the mod operator
+// > the division operator
+// > arrays
+// > functions
+// > boolean
+// > try /catch/throw
+
+function theNumbers(...numbers){
+
+  if (numbers.length < 1){
+    return console.log("Please provide numbers for testing");
   }
-  console.log("The card value: " + randomCard[0]);
-  console.log(deck);
+
+  for (let i=0; i < numbers.length ; i++){
+    if (numbers[i] % 11 === 0){
+      console.log(`${numbers[i]} is divisible by 11`);
+    } else {
+      console.log(`${numbers[i]} is not divisible by 11`);
+    }
+  }
+
 }
+
+theNumbers(11,65,99);
+theNumbers(110,777);
+theNumbers(12,22,37,55);
+theNumbers();
+theNumbers(2031, 2022, 2222);
