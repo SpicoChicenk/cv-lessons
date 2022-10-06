@@ -1,3 +1,5 @@
+/* HR rule look-up change where the active/hover is instead of being under the name be under the border */
+
 @import url("https://fonts.googleapis.com/css2?family=Barlow&family=Barlow+Condensed&family=Bellefair&display=swap");
 
 
@@ -70,3 +72,69 @@ span{
 ul{
   list-style-type: none;
 }
+
+a{
+  text-decoration: none;
+  color: #fff;
+}
+
+.nav-selection{
+  display:inline-block;
+  margin: 0 30px;
+}
+
+.nav-selection:hover{
+  border-bottom: #979797 solid 2px;
+}
+
+.active{
+  border-bottom: #fff solid 2px;
+}
+
+
+
+hr{
+  width: 20%;
+  border: #979797 solid 0.5px;
+}
+
+.flex{
+  display:flex;
+  flex-basis: auto;
+  align-items: center;
+}
+
+.no-flex{
+  flex: 0;
+}
+
+.logo{
+  width: 15%;
+  text-align: center;
+}
+
+.tab{
+  width: 85%;
+  text-align: center;
+}
+
+.line{
+  width: 35%;
+}
+
+.design{
+  width: 45%;
+  padding: 20px 60px 20px 20px;
+  margin-left: 50%;
+  background-color: rgba(151, 151, 151, 0.1);
+  backdrop-filter: blur(10px);
+}
+
+/* .grid-container{
+  display: grid;
+}
+
+.grid-item{
+  display:inline;
+  margin: 0 5px;
+} */
